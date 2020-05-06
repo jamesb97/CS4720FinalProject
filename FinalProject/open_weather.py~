@@ -1,0 +1,44 @@
+'''
+Python script which gets the current weather data for a particular zip code
+and prints out some data in the table.
+REST API get weather data which returns the Name, Current Temperature,
+Atmospheric Pressure, Wind Speed, Wind Direction, Time of Report.
+'''
+import requests
+#Enter the corresponding api key from openweather
+API_key = "6de9e896391aed525254306b3e5df953"
+base_url = "http://api.openweathermap.org/data/2.5/weather?"
+#User is prompted to enter the city name or zip code
+city_name = input('Enter City Name: ')
+#Instantiate corresponding url from openweather_api
+Final_url = base_url + "appid=" + API_key + "&q=" + city_name
+weather_data = requests.get(Final_url).json()
+
+#Get input for current temperature
+temp = weather_data['main']['temp']
+
+#Get input for the current pressure
+pressure = weather_data['main']['pressure']
+
+#Get input for wind speed
+wind_speed = weather_data['wind']['speed']
+
+#Get input for wind direction
+wind_direction = weather_data['wind']['deg']
+
+#Get input for the current weather description
+description = weather_data['weather'][0]['description']
+
+#Print the data to the console
+print('\nCurrent Temperature: ', temp, "K")
+print('\nAtmospheric Pressure: ', pressure, "hpa")
+print('\nWind Speed: ', wind_speed, "m/h")
+print('\nWind Direction: ', wind_direction)
+print('\nDescription: ', description)
+
+#Import Date and Time module for displaying the current time report.
+import datetime
+now=datetime.datetime.now()
+print("\nTime of Report: ")
+print(now.strftime('%Y-%m-%d %H:%M:%S'))
+

@@ -1,0 +1,54 @@
+{
+   "coord": {
+      "lon": -84.62,
+      "lat": 34.02
+   },
+   "weather": [
+      {
+         "id": 502,
+         "main": "Rain",
+         "description": "heavy intensity rain",
+         "icon": "10d"
+      },
+      {
+         "id": 701,
+         "main": "Mist",
+         "description": "mist",
+         "icon": "50d"
+      }
+   ],
+   "base": "stations",
+   "main": {
+      "temp": 290.84,
+      "feels_like": 289.47,
+      "temp_min": 289.26,
+      "temp_max": 292.59,
+      "pressure": 1008,
+      "humidity": 93
+   },
+   "visibility": 6437,
+   "wind": {
+      "speed": 5.1,
+      "deg": 240,
+      "gust": 10.8
+   },
+   "rain": {
+      "1h": 9.27
+   },
+   "clouds": {
+      "all": 90
+   },
+   "dt": 1588203102,
+   "sys": {
+      "type": 1,
+      "id": 5747,
+      "country": "US",
+      "sunrise": 1588157441,
+      "sunset": 1588206036
+   },
+   "timezone": -14400,
+   "id": 4207783,
+   "name": "Marietta",
+   "cod": 200
+}
+
